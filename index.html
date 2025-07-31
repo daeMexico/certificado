@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Encabezado UGTO</title>
+  <title>Sistemade UGTO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
@@ -13,20 +14,18 @@
     }
 
     .header {
-  /* height: auto por defecto */
-  width: 100%;
-  background: linear-gradient(#092F57, #1F7DE0);
-  color: white;
-  display: flex;
-  align-items: center;
-  padding: 0 30px;
-  box-shadow: none;
-  box-shadow: 0px 7px 5px #A0935F;
-
-}
+      width: 100%;
+      background: linear-gradient(#092F57, #1F7DE0);
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0px 7px 5px #A0935F;
+    }
 
     .header img {
-      height: 109px;
+      height: 90px;
       margin-right: 20px;
       background-color: white;
       border-radius: 0px;
@@ -37,21 +36,22 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin-left: 100px; 
       color: #ffffff;
+      margin-top: 10px;
     }
 
     .text-container p {
       margin: 5px 0;
       font-size: 15px;
-      color: #ffffff;
     }
 
     .text-container p.title {
-      font-size: 24px;
+      font-size: 22px;
     }
+
     .column-container {
-      max-width: 600px;
+      max-width: 90%;
+      width: 600px;
       margin: 40px auto;
       background-color: #ffffff;
       border-radius: 8px;
@@ -61,11 +61,13 @@
 
     .info-row {
       display: flex;
+      flex-wrap: wrap;
       margin-bottom: 12px;
     }
 
     .label {
-      width: 220px;
+      width: 100%;
+      max-width: 220px;
       font-weight: bold;
       color: #092F57;
     }
@@ -83,8 +85,72 @@
       color: #000;
     }
 
-    
+    .button-container,
+    .qr-container,
+    .comunicado-container {
+      text-align: center;
+      margin-top: 30px;
+    }
 
+    .btn {
+      background-color: #1F7DE0;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      font-family: 'Raleway', sans-serif;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #145cad;
+    }
+
+    .comunicado-box {
+      display: inline-block;
+      padding: 15px 20px;
+      background-color: #f0f8ff;
+      border: 2px solid #2980b9;
+      border-radius: 15px;
+      font-family: Arial, sans-serif;
+      color: #2c3e50;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .comunicado-box a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+
+    .comunicado-box h3 {
+      color: #2c3e50;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .comunicado-box p {
+      color: #34495e;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .header img {
+        margin-bottom: 10px;
+      }
+      .text-container {
+        margin-left: 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -96,106 +162,39 @@
       <p class="title"><b>D</b>irección de <b>A</b>dministración <b>E</b>scolar</p>
       <p>Validación de Certificado de Estudios Electrónico</p>
     </div>
-</div>
+  </div>
 
-<div class="column-container">
+  <div class="column-container">
     <div class="title">
       La Universidad de Guanajuato indica la validez del certificado de estudios expedido con la siguiente información general:
     </div>
 
-    <div class="info-row">
-      <div class="label">Nombre completo:</div>
-      <div class="value">IVAN ANTONIO URIOSTEGUI ESPÍNDOLA</div>
-    </div>
+    <div class="info-row"><div class="label">Nombre completo:</div><div class="value">IVAN ANTONIO URIOSTEGUI ESPÍNDOLA</div></div>
+    <div class="info-row"><div class="label">Tipo de certificado:</div><div class="value">Total</div></div>
+    <div class="info-row"><div class="label">Programa educativo:</div><div class="value">Bachillerato General</div></div>
+    <div class="info-row"><div class="label">Escuela / División:</div><div class="value">Escuela de Nivel Medio Superior de Salamanca</div></div>
+    <div class="info-row"><div class="label">Promedio general:</div><div class="value">8.59</div></div>
+    <div class="info-row"><div class="label">Fecha de última calificación:</div><div class="value">06/06/2025</div></div>
+    <div class="info-row"><div class="label">Fecha de emisión:</div><div class="value">27 (veintisiete) días del mes de junio del 2025</div></div>
+    <div class="info-row"><div class="label">Código de la consulta:</div><div class="value">565e9602d535229df70781ace4c781f0506/06/2025</div></div>
+  </div>
 
-    <div class="info-row">
-      <div class="label">Tipo de certificado:</div>
-      <div class="value">Total</div>
-    </div>
+  <div class="button-container">
+    <a href="certificado.pdf" target="_blank" class="btn">Vista del certificado</a>
+  </div>
 
-    <div class="info-row">
-      <div class="label">Programa educativo:</div>
-      <div class="value">Bachillerato General</div>
-    </div>
-
-    <div class="info-row">
-      <div class="label">Escuela / División:</div>
-      <div class="value">Escuela de Nivel Medio Superior de Salamanca</div>
-    </div>
-
-    <div class="info-row">
-      <div class="label">Promedio general:</div>
-      <div class="value">8.59</div>
-    </div>
-
-    <div class="info-row">
-      <div class="label">Fecha de última calificación:</div>
-      <div class="value">06/06/2025</div>
-    </div>
-
-    <div class="info-row">
-      <div class="label">Fecha de emisión:</div>
-      <div class="value">27 (veintisiete) días del mes de junio del 2025</div>
-    </div>
-
-    <div class="info-row">
-      <div class="label">Código de la consulta:</div>
-      <div class="value">565e9602d535229df70781ace4c781f0506/06/2025</div>
+  <div class="comunicado-container">
+    <div class="comunicado-box">
+      <h3>COMUNICADO</h3>
+      <p>Sobre la validez del certificado electrónico.</p>
+      <p>Puedes consultar el comunicado dando clic <a href="COMUNICADO.pdf" target="_blank">aquí</a>.</p>
+      <p>Y consultar el registro ante la SEP - SGP dando clic <a href="Registro.PDF" target="_blank">aquí</a>.</p>
     </div>
   </div>
-<div>
 
-    <div style="text-align: center; margin-top: 20px;">
-        <a href="https://www.dae.ugto.mx/Certificados/Default.aspx?Id=97666&FEmision=27062025&NC=3003408" target="_blank" 
-           style="
-
-             margin-top: 40px;
-           
-             background-color: #1F7DE0;
-             color: white;
-             padding: 10px 20px;
-             text-decoration: none;
-             font-weight: bold;
-             border-radius: 8px;
-             font-family: 'Raleway', sans-serif;
-             box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-             transition: background-color 0.3s;
-             display: inline-block;
-           "
-           onmouseover="this.style.backgroundColor='#145cad'"
-           onmouseout="this.style.backgroundColor='#1F7DE0'">
-          Vista del certificado
-        </a>
-      </div>
-      <td></td>
-
-
-   
-    <div style="text-align: center;">
-        <div style="
-        margin-top: 40px;
-          display: inline-block;
-          padding: 5px 15px;
-          background-color: #f0f8ff;
-          border: 2px solid #2980b9;
-          border-radius: 15px;
-          font-family: Arial, sans-serif;
-          color: #2c3e50;
-          font-size: 16px;
-          text-align: center;
-          white-space: nowrap;
-        ">
-    
-    <h3 style="color: #2c3e50; font-size: 18px; margin-bottom: 10px;">COMUNICADO</h3>
-    <p style="color: #34495e; font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-      Sobre la validez del certificado electrónico.
-    </p>
-    <p style="color: #34495e; font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-      Puedes consultar el comunicado dando clic <a href="COMUNICADO.pdf" target="_blank" style="color: #2980b9;">aquí</a>.
-    </p>
-    <p style="color: #34495e; font-size: 14px; line-height: 1.6;">
-      Y consultar el registro ante la SEP - SGP dando clic <a href="Registro%20Certificado-E.PDF" target="_blank" style="color: #2980b9;">aquí</a>.
-    </p>
+  <div class="qr-container">
+    <img src="https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=https%3A%2F%2Fdaemexico.github.io%2Fcertificado%2F" alt="Código QR para certificado">
+    <p style="font-size: 14px;">Escanea el código QR para ver el certificado</p>
   </div>
 
 </body>
