@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistemade UGTO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      background-color: #ffffff;
+    }
+
+    .header {
+      width: 100%;
+      background: linear-gradient(#092F57, #1F7DE0);
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0px 7px 5px #A0935F;
+    }
+
+    .header img {
+      height: 90px;
+      margin-right: 20px;
+      background-color: white;
+      border-radius: 0px;
+      padding: 0px;
+    }
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #ffffff;
+      margin-top: 10px;
+    }
+
+    .text-container p {
+      margin: 5px 0;
+      font-size: 15px;
+    }
+
+    .text-container p.title {
+      font-size: 22px;
+    }
+
+    .column-container {
+      max-width: 90%;
+      width: 600px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+
+    .info-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .label {
+      width: 100%;
+      max-width: 220px;
+      font-weight: bold;
+      color: #092F57;
+    }
+
+    .value {
+      flex: 1;
+      color: #000;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 30px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .button-container,
+    .qr-container,
+    .comunicado-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .btn {
+      background-color: #1F7DE0;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      font-family: 'Raleway', sans-serif;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #145cad;
+    }
+
+    .comunicado-box {
+      display: inline-block;
+      padding: 15px 20px;
+      background-color: #f0f8ff;
+      border: 2px solid #2980b9;
+      border-radius: 15px;
+      font-family: Arial, sans-serif;
+      color: #2c3e50;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .comunicado-box a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+
+    .comunicado-box h3 {
+      color: #2c3e50;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .comunicado-box p {
+      color: #34495e;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .header img {
+        margin-bottom: 10px;
+      }
+      .text-container {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER INSTITUCIONAL -->
+  <div class="header">
+    <img src="img/logoUG.png" alt="Logo UG">
+    <div class="text-container">
+      <p class="title"><b>D</b>irección de <b>A</b>dministración <b>E</b>scolar</p>
+      <p>Validación de Certificado de Estudios Electrónico</p>
+    </div>
+  </div>
+
+  <div class="column-container">
+    <div class="title">
+      La Universidad de Guanajuato indica la validez del certificado de estudios expedido con la siguiente información general:
+    </div>
+
+    <div class="info-row"><div class="label">Nombre completo:</div><div class="value">IVAN ANTONIO URIOSTEGUI ESPÍNDOLA</div></div>
+    <div class="info-row"><div class="label">Tipo de certificado:</div><div class="value">Total</div></div>
+    <div class="info-row"><div class="label">Programa educativo:</div><div class="value">Bachillerato General</div></div>
+    <div class="info-row"><div class="label">Escuela / División:</div><div class="value">Escuela de Nivel Medio Superior de Salamanca</div></div>
+    <div class="info-row"><div class="label">Promedio general:</div><div class="value">8.59</div></div>
+    <div class="info-row"><div class="label">Fecha de última calificación:</div><div class="value">06/06/2025</div></div>
+    <div class="info-row"><div class="label">Fecha de emisión:</div><div class="value">27 (veintisiete) días del mes de junio del 2025</div></div>
+    <div class="info-row"><div class="label">Código de la consulta:</div><div class="value">565e9602d535229df70781ace4c781f0506/06/2025</div></div>
+  </div>
+
+  <div class="button-container">
+    <a href="certificado.pdf" target="_blank" class="btn">Vista del certificado</a>
+  </div>
+
+  <div class="comunicado-container">
+    <div class="comunicado-box">
+      <h3>COMUNICADO</h3>
+      <p>Sobre la validez del certificado electrónico.</p>
+      <p>Puedes consultar el comunicado dando clic <a href="comunicado.pdf" target="_blank">aquí</a>.</p>
+      <p>Y consultar el registro ante la SEP - SGP dando clic <a href="registro.PDF" target="_blank">aquí</a>.</p>
+    </div>
+  </div>
+
+  
+
+</body>
+</html>
